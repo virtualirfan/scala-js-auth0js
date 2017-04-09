@@ -1,12 +1,12 @@
-scala-js-auth0-js
+scala-js-auth0js
 ===============
 
-[![Build Status](https://travis-ci.org/DefinitelyScala/scala-js-auth0-js.svg?branch=master)](https://travis-ci.org/DefinitelyScala/scala-js-auth0-js)
+[![Build Status](https://travis-ci.org/DefinitelyScala/scala-js-auth0js.svg?branch=master)](https://travis-ci.org/DefinitelyScala/scala-js-auth0js)
 [![Scala.js](https://www.scala-js.org/assets/badges/scalajs-0.6.15.svg)](https://www.scala-js.org/)
 
 Scala.js facades for [Auth0.js](https://github.com/auth0/auth0.js).
 
-Generated from [TypeScript definitions](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/auth0-js) based on Auth0.js 8.1.
+Generated from [TypeScript definitions](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/auth0js) based on Auth0.js 8.1.
 
 Usage
 -----
@@ -20,7 +20,7 @@ resolvers += Resolver.jcenterRepo,
 Then, add it to your SBT dependencies:
 
 ```
-libraryDependencies += "com.definitelyscala" %%% "scala-js-auth0-js" % "1.0.0"
+libraryDependencies += "com.definitelyscala" %%% "scala-js-auth0js" % "1.0.0"
 ```
 
 Classes and traits are available in the package `com.definitelyscala.auth0js`, scaladoc is provided.
