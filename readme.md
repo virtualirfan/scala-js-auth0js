@@ -20,7 +20,7 @@ resolvers += Resolver.jcenterRepo,
 Then, add it to your SBT dependencies:
 
 ```
-libraryDependencies += "com.definitelyscala" %%% "scala-js-auth0js" % "1.0.1"
+libraryDependencies += "com.definitelyscala" %%% "scala-js-auth0js" % "1.0.2"
 ```
 
 Classes and traits are available in the package `com.definitelyscala.auth0js`, scaladoc is provided.
