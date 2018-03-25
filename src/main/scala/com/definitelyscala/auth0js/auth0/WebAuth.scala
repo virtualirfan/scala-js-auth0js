@@ -3,7 +3,7 @@ package com.definitelyscala.auth0js.auth0
 import scala.scalajs.js
 
 @js.native
-@js.annotation.JSGlobal("auth0.WebAuth")
+@js.annotation.JSImport("auth0-js", "WebAuth")
 class WebAuth protected () extends js.Object {
   def this(options: AuthOptions) = this()
   var client: Authentication = js.native

@@ -2,6 +2,9 @@ import com.typesafe.sbt.SbtScalariform.{ ScalariformKeys, scalariformSettings }
 import org.scalajs.sbtplugin.ScalaJSPlugin
 import bintray.BintrayKeys._
 import org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._
+
+import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
+
 import sbt.Keys._
 import sbt._
 
@@ -10,7 +13,7 @@ object Projects {
   val projectName = "scala-js-auth0js"
 
   object Versions {
-    val app = "1.0.2"
+    val app = "1.0.3"
     val scalaVersions = Seq("2.11.8", "2.12.2")
   }
 
@@ -26,7 +29,8 @@ object Projects {
 
     shellPrompt := { state => s"[${Project.extract(state).currentProject.id}] $$ " },
     resolvers += Resolver.jcenterRepo,
-    ScalariformKeys.preferences := ScalariformKeys.preferences.value
+    resolvers += Resolver.sonatypeRepo("releases"),
+      ScalariformKeys.preferences := ScalariformKeys.preferences.value
   ) ++ scalariformSettings
 
   private[this] val scalaJsSettings = Seq(
@@ -45,9 +49,10 @@ object Projects {
     bintrayVcsUrl := Some("git:git@github.com:DefinitelyScala/scala-js-auth0js.git"),
     publishMavenStyle := true,
     licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
-    libraryDependencies ++= Seq("org.scala-js" %%% "scalajs-dom" % "0.9.2"),
+    libraryDependencies ++= Seq("org.scala-js" %%% "scalajs-dom" % "0.9.5"),
     scalaJSStage in Global := FastOptStage
   )
 
   lazy val auth0js: Project = Project(id = projectId, base = file(".")).settings(commonSettings ++ scalaJsSettings).enablePlugins(ScalaJSPlugin)
 }
+
